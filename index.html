@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101713">
+  <title>FitTrack | Fitness Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="FitTrack home">
+        <span class="brand-icon">FT</span>
+        <span>FIT<span class="green">TRACK</span></span>
+      </a>
+      <span class="beta">YOUR FITNESS SPACE</span>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="eyebrow">YOUR PERSONAL FITNESS DASHBOARD</p>
+        <h1>Build your <span class="green">consistency.</span></h1>
+        <p>Train smart. Track your progress. Keep showing up.</p>
+      </section>
+
+      <section class="stats">
+        <article class="stat">
+          <span>Exercises done</span>
+          <strong id="exerciseCount">0</strong>
+          <small>Across all workout days</small>
+        </article>
+        <article class="stat">
+          <span>Water cups</span>
+          <strong id="waterCount">0/8</strong>
+          <small>Daily hydration tracker</small>
+        </article>
+        <article class="stat">
+          <span>Habits completed</span>
+          <strong id="habitCount">0/5</strong>
+          <small>Build a consistent routine</small>
+        </article>
+      </section>
+
+      <nav class="tabs" aria-label="Main navigation">
+        <button class="tab active" data-tab="home">Home</button>
+        <button class="tab" data-tab="workout">Workout</button>
+        <button class="tab" data-tab="habits">Habits</button>
+        <button class="tab" data-tab="progress">Progress</button>
+      </nav>
+
+      <section id="home" class="panel">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">LET'S GET TO WORK</p>
+            <h2>Today's overview</h2>
+          </div>
+          <span id="todayDate" class="date"></span>
+        </div>
+
+        <article class="card featured">
+          <p class="eyebrow">SELECTED WORKOUT</p>
+          <h2 id="homeWorkoutName">Chest + Triceps</h2>
+          <p id="homeWorkoutInfo">6 exercises in this session</p>
+          <div class="progress-track">
+            <div id="homeBar" class="progress-fill"></div>
+          </div>
+          <p id="homeWorkoutCount" class="muted">0 of 6 completed</p>
+          <button class="btn primary" data-go="workout">Open workout →</button>
+        </article>
+
+        <h2 class="subheading">Choose a training day</h2>
+        <div id="dayPicker" class="day-grid"></div>
+
+        <article class="card water-card">
+          <div>
+            <p class="eyebrow">DAILY HYDRATION</p>
+            <h2>Water tracker</h2>
+            <p class="muted">One cup at a time</p>
+          </div>
+          <div class="water-controls">
+            <button id="waterMinus" class="btn secondary" aria-label="Remove a cup">−</button>
+            <strong id="waterLabel">0 / 8</strong>
+            <button id="waterPlus" class="btn primary" aria-label="Add a cup">+</button>
+          </div>
+        </article>
+      </section>
+
+      <section id="workout" class="panel hidden">
+        <p class="eyebrow">YOUR TRAINING PLAN</p>
+        <h2>Workout planner</h2>
+        <p class="muted">Select a day and tick exercises as you finish.</p>
+        <div id="workoutDayPicker" class="day-grid"></div>
+
+        <article class="card">
+          <h2 id="workoutName">Chest + Triceps</h2>
+          <p id="workoutSummary" class="muted"></p>
+          <div class="progress-track">
+            <div id="workoutBar" class="progress-fill"></div>
+          </div>
+          <div id="exerciseList" class="exercise-list"></div>
+          <button id="resetWorkout" class="btn secondary full">Reset this day's checklist</button>
+        </article>
+      </section>
+
+      <section id="habits" class="panel hidden">
+        <p class="eyebrow">SMALL STEPS, EVERY DAY</p>
+        <h2>Daily habits</h2>
+        <p class="muted">Check off the habits you've completed today.</p>
+        <article class="card">
+          <div class="progress-track">
+            <div id="habitBar" class="progress-fill"></div>
+          </div>
+          <p id="habitSummary" class="muted">0 of 5 completed</p>
+          <div id="habitList" class="habit-list"></div>
+          <button id="resetHabits" class="btn secondary full">Reset today's habits</button>
+        </article>
+      </section>
+
+      <section id="progress" class="panel hidden">
+        <p class="eyebrow">YOUR JOURNEY</p>
+        <h2>Progress tracker</h2>
+        <article class="card">
+          <h3>Body weight</h3>
+          <p class="muted">Optional measurement, in kilograms.</p>
+          <form id="weightForm" class="inline-form">
+            <input id="weightInput" type="number" min="1" max="999"
+              step="0.1" placeholder="Weight in kg" required>
+            <button class="btn primary" type="submit">Log weight</button>
+          </form>
+          <div id="weightHistory" class="history"></div>
+        </article>
+
+        <article class="card">
+          <h3>Training notes</h3>
+          <p class="muted">Write down what went well or what to improve.</p>
+          <textarea id="notesInput" rows="5"
+            placeholder="My workout notes..."></textarea>
+          <p id="notesStatus" class="muted"></p>
+        </article>
+
+        <article class="card">
+          <h3>Your data</h3>
+          <p class="muted">Your information is stored in this browser.</p>
+          <button id="exportData" class="btn secondary full">Export my data (JSON)</button>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <span>FITTRACK</span> · Your training, your progress.
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>```html
+<footer class="site-footer">
+  Created by <strong>Arham and Nawaz</strong> ❤️
+</footer>
+```
+</html>
